@@ -22,16 +22,6 @@ section {font-family: 'Delicious Handrawn';}
     align-items: center;
 }
 
-.nav-header__logo {
-/* height: 50%; */
-}
-
-.nav-header__botones{
-
-    /* height: 50%; */
-    /* padding-right: 15px; */
-}
-
 .buscador {
     height: 30px;
     left: 50rem;
