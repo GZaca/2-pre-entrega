@@ -5,8 +5,8 @@
 
  /* header {
     position: fixed;
-   
-} */
+   } */
+    
 section {font-family: 'Delicious Handrawn';}
 
 .nav-header {
@@ -22,10 +22,17 @@ section {font-family: 'Delicious Handrawn';}
     align-items: center;
 }
 
+.nav-header__logo {
+    display: inline-block;
+}
+
+.nav-header__botones {
+    display: inline-block;
+}
+
 .buscador {
     height: 30px;
     left: 50rem;
-    /* se hace con float? */
 }
 
 .logo-nav {
@@ -56,7 +63,7 @@ flex-direction:row;
 flex-wrap: nowrap;
 /* height: 600px; */
 width: 80%;
-justify-content:space-evenly;
+justify-content:space-between;
 }
 
 .imagen-carrusel {
@@ -68,7 +75,7 @@ justify-content:space-evenly;
 }
 
 .imagen-carrusel:hover {
-    width: 300px;
+    width: 18rem;
     opacity: 1;
     filter: contrast(120%);
 }
@@ -78,7 +85,7 @@ justify-content:space-evenly;
     margin-top: 5rem;
     margin-bottom: 4rem;
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: space-around;
     /* position: relative; */
     
@@ -86,8 +93,14 @@ justify-content:space-evenly;
     
     }
 
-.banner-envios__col {
+/* .icon-banner {
+    display: inline-block;
+    position: relative;
+} */
+
+.banner-envios__row {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;  
 
@@ -95,7 +108,8 @@ justify-content:space-evenly;
 
 .redes {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content:space-around;
     padding-bottom: 10rem;
 }
 
@@ -110,6 +124,8 @@ justify-content:space-evenly;
 
 }
 
+/*   */
+
 .sale {
 justify-content: center
 ;}
@@ -118,6 +134,7 @@ justify-content: center
     width: 100%;
     height: 20rem;
     padding-bottom: 2rem;
+    position: relative;
 }
 
 iframe {
@@ -128,6 +145,7 @@ iframe {
 .nav-footer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+   
 }
 
 .social-icon {
@@ -203,4 +221,27 @@ width: 100%;
     opacity: 1;
     filter: contrast(120%);
 }
+.info-product{
+    display: flex;
+    flex-direction: column;
+}
 
+.prenda img{
+    max-width: 100%;
+}
+@media screen and (max-width: 600px) {
+    .banner-envios {
+        flex-direction: column;
+    }
+
+    .icon-banner {
+        width: 100%;
+    }
+
+    .carrusel {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+}
