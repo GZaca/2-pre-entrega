@@ -4,28 +4,54 @@ footer {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
 
-        div {
+        @include mobile {
+            display: flex;
+            flex-flow: nowrap column ;
+            align-items: center ;
+            width: 100%;
+        }
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+                }
 
-            a img {
+                a img {
                 width: 12rem;
                 flex-grow: 2;
+                align-items: center;
+            }
+        
+        
+        div {
+
+            ul {
+                li a {
+                text-decoration: none;
+                color:rgb(184, 28, 106)}
+                
             }
         }
 
 
-        .social-icon {
-            grid-column-start: 5;
-            grid-column-end: 6;
-            display: flex;
-            justify-items: center;
-            align-items: center;
-
-            a img {
-                width: 25px;
-
-            }
-
-        }
+                .social-icon {
+                    grid-column-start: 5;
+                    grid-column-end: 6;
+                    display: flex;
+                    justify-items: center;
+                    align-items: center;
+        
+                    a img {
+                        width: 3rem;
+        
+                        @include mobile {
+                            padding-top: 1rem;
+                            
+                        }
+        
+                    }
+                }
 
     }
 }
