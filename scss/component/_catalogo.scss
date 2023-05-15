@@ -5,7 +5,7 @@ main {
         div.parent {
 
             display: grid;
-            
+
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(4, 1fr);
             grid-column-gap: 1rem;
@@ -14,20 +14,20 @@ main {
             @include mobile {
                 display: flex;
                 flex-direction: column;
-            } 
+            }
 
             @include tablet {
                 display: flex;
                 flex-direction: column;
-                flex-wrap: nowrap ;
+                flex-wrap: nowrap;
             }
 
             img {
-                
+
                 max-width: 17rem;
                 transition: ease;
-                object-fit:contain;
-                
+                object-fit: contain;
+
                 &:hover {
                     max-width: 17.2rem;
                     filter: contrast(110%);
@@ -38,12 +38,12 @@ main {
             div.lista-productos {
                 grid-area: 1 / 1 / 6 / 2;
 
-            @include mobile {
+                @include mobile {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                 }
-            
+
                 @include tablet {
                     display: flex;
                     flex-direction: column;
@@ -54,22 +54,20 @@ main {
 
 
                 ul li a {
-                            text-decoration: none;
-                            color: rgb(184, 28, 106)
-                        }
-                
-                    }
-            
+                    text-decoration: none;
+                    color: rgb(184, 28, 106)
+                }
+
+            }
+
 
             .div2 {
                 grid-area: 1 / 2 / 2 / 3;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                @extend %img-cat;
 
 
-                .info-product {
-                @extend %info-prod;
+                div.info-product {
+                    @extend %info-prod;
                 }
             }
 
@@ -90,8 +88,7 @@ main {
                 @extend %img-cat;
 
                 .info-product {
-                    display: flex;
-                    flex-direction: column;
+                    @extend %info-prod;
                 }
 
             }
@@ -165,7 +162,7 @@ main {
                     flex-direction: column;
                 }
             }
-        
+
         }
 
     }
