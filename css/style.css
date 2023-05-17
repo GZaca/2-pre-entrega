@@ -45,7 +45,7 @@ footer nav {
   }
 }
 footer nav a img {
-  width: 12rem;
+  width: 15rem;
   flex-grow: 2;
   align-items: center;
 }
@@ -84,27 +84,31 @@ main section.carrusel div div .imagen-carrusel {
   width: 14rem;
   flex-grow: 1;
   object-fit: contain;
-  opacity: 0.9;
   transition: 0.5s ease;
 }
 main section.carrusel div div .imagen-carrusel:hover {
   width: 18rem;
   opacity: 1;
-  filter: contrast(120%);
-}
-main section.banner-envios {
-  height: 10rem;
-  margin-top: 5rem;
-  margin-bottom: 8rem;
-  display: flex;
-  justify-content: space-around;
+  filter: contrast(110%);
 }
 @media screen and (max-width: 500px) {
   main section.banner-envios {
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  main section.banner-envios {
+    display: none;
+  }
+}
 main section.banner-envios .banner-envios__row {
+  height: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+main section.banner-envios .banner-envios__row .icon-banner {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -193,9 +197,6 @@ main div div.parent div.lista-productos ul li a {
 }
 main div div.parent .div2 {
   grid-area: 1/2/2/3;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 main div div.parent .div3 {
   grid-area: 1/3/2/4;
@@ -207,10 +208,6 @@ main div div.parent .div3 .info-product {
 }
 main div div.parent .div4 {
   grid-area: 1/4/2/5;
-}
-main div div.parent .div4 .info-product {
-  display: flex;
-  flex-direction: column;
 }
 main div div.parent .div5 {
   grid-area: 2/2/3/3;
@@ -262,6 +259,24 @@ main div div.parent .div11 .info-product {
   flex-direction: column;
 }
 
+main section.cuidado-prendas {
+  display: flex;
+  flex-wrap: nowrap;
+}
+main section.cuidado-prendas div.cartas {
+  display: flex;
+  align-items: baseline;
+}
+main section.cuidado-prendas div.cartas div.cuidado {
+  border: solid 2px aquamarine;
+  padding: 1rem 0.5em;
+  margin: 0.5rem;
+  border-radius: 10%;
+  max-width: 95%;
+}
+main section.cuidado-prendas div.cartas div.cuidado:hover {
+  border: solid 4px rgb(110, 236, 194);
+}
 main section.guia-de-talles img {
   width: 100%;
 }
@@ -270,10 +285,16 @@ main section img {
   max-width: 100%;
 }
 
-main div div.parent .div3, main div div.parent .div4, main div div.parent .div5, main div div.parent .div6, main div div.parent .div7, main div div.parent .div8, main div div.parent .div9, main div div.parent .div10, main div div.parent .div11 {
+main div div.parent .div2, main div div.parent .div3, main div div.parent .div4, main div div.parent .div5, main div div.parent .div6, main div div.parent .div7, main div div.parent .div8, main div div.parent .div9, main div div.parent .div10, main div div.parent .div11 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+main div div.parent .div2 div.info-product, main div div.parent .div4 .info-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

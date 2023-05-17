@@ -1,15 +1,40 @@
 main {
 
-    section.guia-de-talles {
+    section.cuidado-prendas {
 
-        img {
-                width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
 
+        div.cartas {
+            display: flex;
+            align-items: baseline;
+
+            div.cuidado {
+                border: solid 2px aquamarine;
+                padding: 1rem .5em;
+                margin: .5rem;
+                border-radius: 10%;
+                max-width: 95%;
+
+
+                &:hover {
+                    border: solid 4px rgb(110, 236, 194);
+
+                }
             }
-
-
         }
 
     }
 
+    section.guia-de-talles {
+
+        img {
+            width: 100%;
+
+        }
+
+
+    }
+
+}
 
