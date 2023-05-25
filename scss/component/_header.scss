@@ -10,27 +10,60 @@ header {
             justify-content: space-between;
             align-items: center;
 
-            div {
-                display: inline-block;
+            @include mobile {
+                flex-flow: nowrap column;
+                align-items: center;
+                padding-bottom: .5rem;
+                justify-content: space-evenly;
+            }
 
-                a img {
-                    width: 12rem;
-                    flex-grow: 2;
+
+
+            div {
+                display: flex;
+                flex-flow: row nowrap;
+
+                @include mobile {
+                    display: flex;
+                    flex-flow: nowrap row;
+                }
+
+                div {
+                    @include mobile {
+                        flex-grow: 4;
+                    }
+
+                    a img {
+                        width: 13rem;
+                        flex-grow: 1;
+
+                    }
+                }
+
+                div {
+                    @include mobile {
+                        flex-grow: 1;
+                    }
+
 
                 }
             }
 
             div {
-                display: inline-block;
+
 
                 form {
+                    width: 90%;
 
-                    a img {
+                    button {
+                        border: none;
+                        border-radius: 1em;
 
-                        width: 24px;
-                        margin-left: 15px;
+                        img {
 
+                            width: 1.5rem;
 
+                        }
                     }
 
                 }

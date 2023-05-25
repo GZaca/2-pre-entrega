@@ -8,6 +8,14 @@ main {
         div.cartas {
             display: flex;
             align-items: baseline;
+                            @include mobile {
+                                    flex-flow: nowrap column;
+                                }
+
+                            @include landscape {
+                                flex-direction: column;
+                            }
+
 
             div.cuidado {
                 border: solid 2px aquamarine;
@@ -15,6 +23,7 @@ main {
                 margin: .5rem;
                 border-radius: 10%;
                 max-width: 95%;
+                
 
 
                 &:hover {
@@ -36,5 +45,12 @@ main {
 
     }
 
-}
+    section.preguntas-frecuentes {
+        div.row {
+                @include mobile {
+                 flex-direction: column;
+                }
+        }
+    }
 
+}
